@@ -16,7 +16,8 @@ function codigos (){
     }
     return codigos
 }
-
+let listaEdades= edades();
+console.log(listaEdades);
 function edadMayor(edades) {
     let mayor = 0;
     console.log(edades)
@@ -28,5 +29,5 @@ function edadMayor(edades) {
     });
     return mayor;
 }
-console.log(edadMayor(edades()))
+console.log(edadMayor(listaEdades))
 
