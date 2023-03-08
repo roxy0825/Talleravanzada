@@ -4,6 +4,7 @@ function edades (){
        edades.push(Math.floor(Math.random()*100))
         
     }
+
     return edades
 }
 
@@ -25,6 +26,7 @@ function edadMayor(edades) {
         if (edad > mayor){
             mayor=edad;
         }
+        
         
     });
     return mayor;
