@@ -1,35 +1,58 @@
-function edades (){
-    let edades =[]
+// PROBLEMA: Para habilitar la guerra de los clones es necesario
+// clasificar la edad de estos, elabore un programa que permita
+// recibir 20 edades y 20 códigos diferentes generadas
+// aleatoriamente y determine cual de esas edades es la mayor. Si
+// se repite la misma edad se debe contar el número de
+// repeticiones
+
+function edades() {
+    let edades=[]
     for (let i = 0; i < 20; i++) {
-       edades.push(Math.floor(Math.random()*100))
+        edades.push(Math.floor(Math.random()*10));
         
     }
-
-    return edades
+    return(edades)
 }
 
 
-function codigos (){
-    let codigos =[]
+function codigos() {
+    let codigos=[]
     for (let i = 0; i < 20; i++) {
-       codigos.push(Math.floor(1000 + Math.random() * 9000))
+        codigos.push(Math.floor(1000 + Math.random()* 9000));
         
     }
-    return codigos
+    return(codigos)
 }
-let listaEdades= edades();
-console.log(listaEdades);
-function edadMayor(edades) {
-    let mayor = 0;
-    console.log(edades)
+
+let listaedades=edades()
+function edadmayor(edades) {
+    let mayor=0;
+    console.log(edades);
     edades.forEach(edad => {
-        if (edad > mayor){
+        if (edad>=mayor) {
             mayor=edad;
         }
-        
-        
     });
+
     return mayor;
+
 }
-console.log(edadMayor(listaEdades))
+let mayor=edadmayor(listaedades)
+function edadRepetida(edades,edadmayor) {
+    let i = 0;
+   edades.forEach(edad =>{
+
+    if (edadmayor==edad) {
+        i++;
+    }
+})
+  
+return i
+}
+
+//console.log(listaedades)
+//console.log(edadRepetida(listaedades, mayor));
+
+console.log(edadmayor(edades()));
+console.log ("Cantidad: " + edadRepetida(listaedades,mayor));
 
