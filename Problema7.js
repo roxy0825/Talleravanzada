@@ -1,6 +1,5 @@
 //clasificar 10 números enteros positivos o negativos 
-// Diseño un algoritmo que permita recibir dichos 10 números e indicar
-//¿Cuál fue el más cercano a cero? (Si el número es negativo se
+//MOSTRAR EL MAS CERCANO A CERO (Si el número es negativo se
 //debe mostrar el resultado del valor absoluto)
 
 
@@ -15,10 +14,14 @@ for (let i = 0; i < numeros.length; i++) {
         
         masCercano= numeros[i];
     }
-    if(masCercano < 0 ){
-        return masCercano.Math.abs
-    }
     
+        
+    }
+    if(masCercano < 0 ){
+    return Math.abs(masCercano) ;
+    
+}else{
+    console.log("el numero mas cercano a cero es: " + Math.abs(masCercano));
 }
-console.log("el numero mas cercano a 0 es: " + Math.abs (masCercano))
+
 

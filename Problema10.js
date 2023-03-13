@@ -1,3 +1,13 @@
+//software que permita clasificar 
+//alimento = {nombre, tipo (Puede ser vegetal, animal, insecto), nivel de energía aportado (números entre 100-500)}
+//programa que recibA 300 alimentos y mediante una
+//función primaria después de 5 segundos se pueda obtener solo los
+//alimentos de tipo vegetal que entreguen más de 200 unidades de
+//energía. una función callback debe permitir entregar la
+//sumatoria de niveles de energía entregados por los alimentos vegetales
+
+
+
 const alimentosInsecto = ['Abejas','Orugas','hormigas','grillos','saltahojas'];
   
 const alimentosAnimales = ['Pollo','Cerdo','Cordero','Pavo','Gallina'];

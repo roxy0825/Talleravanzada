@@ -1,9 +1,3 @@
-// listado de 15 mapas
-// Sumar la cantidad total de agua 
- //Sumar y multiplicar por 100 el total de oxigeno 
- //planetas tiene un nivel de oxigeno negativo 
-//no tiene agua y mostrar la información general de este
-
 let mapas =[
     {nomPlaneta:"Mercurio", latitud:"norte", longitud: 0.25, niveloxígeno:5.6, volumentotaldelagua:13},
     {nomPlaneta:"Venus", latitud:"sur", longitud: 0.51, niveloxígeno:-6.5, volumentotaldelagua:4},
@@ -16,17 +10,18 @@ let mapas =[
     {nomPlaneta:"Plutón", latitud:"norte", longitud: 0.22, niveloxígeno:25.3, volumentotaldelagua:69},
     {nomPlaneta:"Ceres", latitud:"su", longitud: 0.15, niveloxígeno:-34.13, volumentotaldelagua:8},
     {nomPlaneta:"Eris", latitud:"norte", longitud: 0.46, niveloxígeno:16.8, volumentotaldelagua:0},
- ]
+];
 
- let totalAgua = 0;
- let multiplicar=0;
+let totalAgua = 0;
+let multiplicar = 0;
 
- for (let i = 0; i < mapas.length; i++) {
-     totalAgua += mapas[i].volumentotaldelagua;
- }
+mapas.forEach(mapa => {
+    totalAgua += mapa.volumentotaldelagua;
+});
 
- multiplicar= totalAgua * 100;
- let negativo=mapas.filter(mapa=>mapa.niveloxígeno<0)
- console.log("La cantidad total de agua es: " + totalAgua + " El total todo el oxigeno multiplicado en 100 es de: " + multiplicar);
- console.log(negativo)
- 
+multiplicar = totalAgua * 100;
+
+let negativo = mapas.filter(mapa => mapa.niveloxígeno < 0);
+
+console.log(`La cantidad total de agua es: ${totalAgua}. El total todo el oxígeno multiplicado por 100 es de: ${multiplicar}.`);
+console.log(negativo);
